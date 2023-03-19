@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'charts/configure.css' %}">
     <title>Добавление данных для графика</title>
 </head>
 <body>
@@ -14,8 +16,10 @@
     <a href="{% url 'charts:charts' %}">Вернуться в меню</a>
     {% else %}
     <h1>Добавьте данные для {{ diagram.diagram_name }}</h1>
-    <h3>Пропишите данные для таблицы в формате КЛЮЧ=ЗНАЧЕНИЕ,КЛЮЧ=ЗНАЧЕНИЕ ("cars=500,bikes=1000")</h3>
-    <textarea type="text" name="values" required></textarea>
+    <h3>Пропишите данные для графика в формате
+        <br />КЛЮЧ=ЗНАЧЕНИЕ
+        <br />КЛЮЧ=ЗНАЧЕНИЕ</h3>
+    <textarea type="text" name="values" rows="15" cols="50" required></textarea>
     <br>
 
     <input type="submit" value="Сохранить">

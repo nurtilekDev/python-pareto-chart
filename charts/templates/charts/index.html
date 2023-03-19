@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'charts/index.css' %}">
     <title>Title</title>
 </head>
 <body>
+<h1>Выберите один из инструментов управления качеством</h1>
 {% if diagrams %}
     <ul>
     {% for diagram in diagrams %}

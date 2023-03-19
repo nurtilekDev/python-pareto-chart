@@ -15,7 +15,7 @@ def configure(request, diagram_id):
 
 def pareto_chart(request, diagram_id):
     diagram = get_object_or_404(Diagram, pk=diagram_id)
-    items = diagram.fields.split(',')
+    items = diagram.fields.split('\r\n')
 
     def mapper(w):
         return w.split('=')
