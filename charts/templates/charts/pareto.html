@@ -1,11 +1,14 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ru">
 <head>
+  <title>Диаграмма Парето</title>
 </head>
 <body>
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script defer src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script defer data-items="{{ items }}" data-diagram="{{ diagram }}">
+  const div = document.querySelector('#chartContainer')
+  div.innerHTML = '<h1>Загрузка ...</h1>'
     const data = document.currentScript.dataset;
     const items = eval(data.items);
     const diagram = data.diagram;

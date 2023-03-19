@@ -1,0 +1,65 @@
+[
+  {
+    "model": "charts.diagram",
+    "pk": 1,
+    "fields": {
+      "diagram_name": "Диаграмма Ишикавы",
+      "fields": "",
+      "ready": false
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 2,
+    "fields": {
+      "diagram_name": "Контрольные листки",
+      "fields": "",
+      "ready": false
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 3,
+    "fields": {
+      "diagram_name": "Гистограммы",
+      "fields": "",
+      "ready": false
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 4,
+    "fields": {
+      "diagram_name": "Диаграммы разброса",
+      "fields": "",
+      "ready": false
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 5,
+    "fields": {
+      "diagram_name": "Анализ Парето",
+      "fields": "",
+      "ready": true
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 6,
+    "fields": {
+      "diagram_name": "Стратификация",
+      "fields": "",
+      "ready": false
+    }
+  },
+  {
+    "model": "charts.diagram",
+    "pk": 7,
+    "fields": {
+      "diagram_name": "Контрольные карты",
+      "fields": "",
+      "ready": false
+    }
+  }
+]

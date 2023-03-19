@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление данных для графика</title>
+</head>
+<body>
+<form action="{% url 'charts:setup' diagram.id %}" method="post">
+{% csrf_token %}
+    {% if error_message %}
+    <h1>{{ error_message }}</h1>
+    {% elif diagram.ready == False %}
+    <h1>Этот вид графиков еще не доступен</h1>
+    <a href="{% url 'charts:charts' %}">Вернуться в меню</a>
+    {% else %}
+    <h1>Добавьте данные для {{ diagram.diagram_name }}</h1>
+    <h3>Пропишите данные для таблицы в формате КЛЮЧ=ЗНАЧЕНИЕ,КЛЮЧ=ЗНАЧЕНИЕ ("cars=500,bikes=1000")</h3>
+    <textarea type="text" name="values" required></textarea>
+    <br>
+
+    <input type="submit" value="Сохранить">
+    {% endif %}
+</form>
+</body>
+</html>

@@ -9,7 +9,7 @@
     <ul>
     {% for diagram in diagrams %}
         <li>
-            <a href="{% url 'polls:diagram_fill' diagram.id%}">{{ diagram.diagram_name }}</a>
+            <a href="{% url 'charts:configure' diagram.id%}">{{ diagram.diagram_name }}</a>
         </li>
     {% endfor %}
     </ul>
