@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if diagrams %}
+    <ul>
+    {% for diagram in diagrams %}
+        <li>
+            <a href="{% url 'polls:diagram_fill' diagram.id%}">{{ diagram.diagram_name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+{% endif %}
+</body>
+</html>
